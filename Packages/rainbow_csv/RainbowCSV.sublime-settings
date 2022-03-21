@@ -1,0 +1,63 @@
+{
+    // Disable Rainbow CSV for files bigger than the specified size. 
+    // This can be helpful to prevent poor performance and crashes with very large files.
+    // Manual separator selection will override this setting for the current file.
+    "rainbow_csv_max_file_size_bytes": 5000000,
+
+
+    // Enable content-based separator autodetection.
+    // Files with ".csv" and ".tsv" extensions are always highlighted no matter what is the value of this option.
+    "enable_rainbow_csv_autodetect": true,
+
+
+    // List of CSV dialects to autodetect.
+    // "simple" - separators CAN NOT be escaped in a double quoted field, double quotes are ignored
+    // "quoted" - separators CAN be escaped in a double quoted field.
+    // Separators can consist of more than one character, e.g. ": " or "~#~"
+    // If "enable_rainbow_csv_autodetect" is set to false this setting is ignored
+    "rainbow_csv_autodetect_dialects": [["\t", "simple"], [",", "quoted"], [";", "quoted"], ["|", "simple"]],
+
+    // Allow quoted multiline fields as defined in RFC-4180: https://tools.ietf.org/html/rfc4180
+    "allow_newlines_in_fields": false,
+
+    // Use custom high-contrast rainbow colors instead of colors provided by your current color scheme. 
+    // When you enable this option, "auto_adjust_rainbow_colors" also gets enabled by default.
+    "use_custom_rainbow_colors": false,
+
+
+    // Auto adjust rainbow colors for Packages/User/RainbowCSV.sublime-color-scheme  
+    // Rainbow CSV will auto-generate color theme with high-contrast colors to make CSV columns more distinguishable.  
+    // You can disable this setting and manually customize Rainbow CSV color scheme at `Packages/User/RainbowCSV.sublime-color-scheme`, you can use the following [RainbowCSV.sublime-color-scheme](https://github.com/mechatroner/sublime_rainbow_csv/blob/master/RainbowCSV.sublime-color-scheme) file as a starting point for your customizations. 
+    // Do NOT manually customize Packages/User/RainbowCSV.sublime-color-scheme without disabling this setting, the plugin will just rewrite it in that case.
+    // This option has effect only if "use_custom_rainbow_colors" is set to true
+    "auto_adjust_rainbow_colors": true,
+
+
+    // RBQL backend language.
+    // Supported values: "Python", "JS"
+    // In order to use RBQL with JavaScript (JS) you need to have Node JS installed and added to your system path.
+    "rbql_backend_language": "Python",
+
+    // RBQL will treat first records in all input and join files as headers.
+    // You can set this value to true if most of the CSV files you deal with have headers.
+    // You can override this setting on the query level by either adding `WITH (header)` or `WITH (noheader)` to the end of the query.
+    "rbql_with_headers": false,
+
+    // RBQL encoding for files and queries.
+    // Supported values: "latin-1", "utf-8"
+    "rbql_encoding": "utf-8",
+
+
+    // Format of RBQL result set tables.
+    // Supported values: "input", "tsv", "csv"
+    // * input: same format as the input table
+    // * tsv: tab separated values.
+    // * csv: is Excel-compatible and allows quoted commas.
+    "rbql_output_format": "input",
+
+
+    // Enable logging to debug the extension. To view the output you can either
+    // 1. Click "View" -> "Show Console"
+    // 2. Click "Preferences" -> "Browse Packages...", And then open "User/rainbow_csv_debug.log"
+    "enable_debug_logging": false,
+}

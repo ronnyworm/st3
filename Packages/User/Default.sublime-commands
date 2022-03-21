@@ -1,0 +1,76 @@
+[
+    // Define your custom Sublime commands here
+    // Format is same as `key bindings` except replace `keys` with `caption`
+    {
+        // Name to show in Command Palette
+        "caption": "Sum Lines",
+        // Command to invoke
+        "command": "sum_lines"
+        // Optional keyword arguments to provide to command
+        //"args": {"key": "value"}
+    },
+    {
+        // Name to show in Command Palette
+        "caption": "Sum Std",
+        // Command to invoke
+        "command": "sum_std"
+        // Optional keyword arguments to provide to command
+        //"args": {"key": "value"}
+    },
+    {
+        // Name to show in Command Palette
+        "caption": "Since when am I working?",
+        // Command to invoke
+        "command": "since"
+        // Optional keyword arguments to provide to command
+        //"args": {"key": "value"}
+    },
+    {
+        // Name to show in Command Palette
+        "caption": "Sum BeforeTab",
+        // Command to invoke
+        "command": "sum_before_tab"
+        // Optional keyword arguments to provide to command
+        //"args": {"key": "value"}
+    },
+    {
+        // Name to show in Command Palette
+        "caption": "Sum Tage",
+        // Command to invoke
+        "command": "sum_tage"
+        // Optional keyword arguments to provide to command
+        //"args": {"key": "value"}
+    },
+    {
+        // Name to show in Command Palette
+        "caption": "Switch Font Style (Monospace/...)",
+        // Command to invoke
+        "command": "switch_style"
+        // Optional keyword arguments to provide to command
+        //"args": {"key": "value"}
+    },
+    {
+        // Name to show in Command Palette
+        "caption": "Timestamp einfügen",
+        // Command to invoke
+        "command": "insert_time"
+        // Optional keyword arguments to provide to command
+        //"args": {"key": "value"}
+    },
+    {
+        // Name to show in Command Palette
+        "caption": "Wie verrechenbar?",
+        // Command to invoke
+        "command": "verrechenbar"
+        // Optional keyword arguments to provide to command
+        //"args": {"key": "value"}
+    },
+    {
+        // Name to show in Command Palette
+        "caption": "Transformiere Timestamps",
+        // Command to invoke
+        "command": "transform_timestamp_lines"
+        // Optional keyword arguments to provide to command
+        //"args": {"key": "value"}
+    }
+]

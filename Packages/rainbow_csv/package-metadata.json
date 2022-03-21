@@ -1,0 +1,1 @@
+{"sublime_text": ">=3000", "description": "\ud83c\udf08Rainbow CSV - Sublime Text Package: Highlight columns in CSV and TSV files and run queries in SQL-like language", "platforms": ["*"], "version": "2.7.0", "url": "https://github.com/mechatroner/sublime_rainbow_csv", "dependencies": []}

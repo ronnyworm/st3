@@ -1,0 +1,22 @@
+[
+    {
+        "caption": "Rainbow CSV",
+        "id": "rainbow_csv",
+        "children":
+        [
+            { "command": "enable_auto", "caption": "Enable: set selected character or text as separator" },
+            { "command": "disable", "caption": "Disable" },
+            { "command": "run_query", "caption": "Run RBQL query (F5)" },
+            { "command": "set_table_name", "caption": "Set table name for RBQL" },
+            { "command": "align", "caption": "Align (with trailing spaces)" },
+            { "command": "shrink", "caption": "Shrink (trim spaces from fields)" },
+            { "command": "csv_lint", "caption": "CSVLint" },
+            { "command": "edit_settings", "caption": "Settings",
+                "args": {
+                    "base_file": "${packages}/rainbow_csv/RainbowCSV.sublime-settings",
+                    "default": "// Settings in here override those in \"RainbowCSV.sublime-settings\"\n\n{\n\t$0\n}\n"
+                }
+            }
+        ]
+    }
+]

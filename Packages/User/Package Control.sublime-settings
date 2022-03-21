@@ -1,0 +1,19 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Compare Side-By-Side",
+		"Emmet",
+		"Evaluate",
+		"HTML-CSS-JS Prettify",
+		"Markdown Images",
+		"MarkdownPreview",
+		"Open URL",
+		"rainbow_csv",
+		"Sort Lines (Numerically)",
+		"Terraform"
+	]
+}
