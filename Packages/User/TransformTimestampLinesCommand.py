@@ -13,8 +13,6 @@ class TransformTimestampLinesCommand(sublime_plugin.TextCommand):
         nextnextstart = 0
         count = 0
         timestamp_pattern = re.compile("^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.*")
-        cache_content = ""
-        cache_position = 0
 
         while True:
             currentline = view.substr(view.line(nextstart))
