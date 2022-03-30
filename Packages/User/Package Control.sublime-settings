@@ -9,11 +9,15 @@
 		"Emmet",
 		"Evaluate",
 		"HTML-CSS-JS Prettify",
+		"LoremIpsum",
 		"Markdown Images",
 		"MarkdownPreview",
 		"Open URL",
+		"Package Control",
+		"Pretty JSON",
 		"rainbow_csv",
 		"Sort Lines (Numerically)",
-		"Terraform"
+		"Terraform",
+		"WordCount"
 	]
 }
