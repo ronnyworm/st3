@@ -6,17 +6,19 @@ from datetime import datetime
 class TransformTimestampLinesCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
-        sum = 0
 
         nextstart = 0
         nothingcount = 0
         oldnextstart = 0
         nextnextstart = 0
-        write_target = ""
-
+        count = 0
         timestamp_pattern = re.compile("^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.*")
+        cache_content = ""
+        cache_position = 0
+
         while True:
             currentline = view.substr(view.line(nextstart))
+
 
             #                                   da kommt schon nichts mehr danach
             if nothingcount < 10 and nextstart != nextnextstart - 1:
@@ -29,8 +31,17 @@ class TransformTimestampLinesCommand(sublime_plugin.TextCommand):
                         std = (datetime2 - datetime1).seconds / 60
 
                         text = currentline[20:-20]
-                        view.insert(edit, nextstart, write_target)
-                        write_target = datetime1.strftime("%d.%m.%Y") + "\t" + str(round(std / 60, 2)) + "\t" + text + "\n"
+                        write_target = \
+                                datetime1.strftime("%d.%m.%Y") + "\t" \
+                                + str(round(std / 60, 2)).replace(".", ",") + "\t" \
+                                + text + "\n"
+
+                        # don't cause an overflow
+                        if count < 10000:
+                            view.replace(edit, view.full_line(nextstart), "")
+                            view.insert(edit, nextstart, write_target)
+                            count += 1
+
                     except Exception as e:
                         pass
 
