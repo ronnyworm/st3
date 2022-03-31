@@ -14,10 +14,9 @@
 		"MarkdownPreview",
 		"Open URL",
 		"Package Control",
-		"Pretty JSON",
 		"rainbow_csv",
 		"Sort Lines (Numerically)",
 		"Terraform",
-		"WordCount"
-	]
+		"WordCount",
+	],
 }

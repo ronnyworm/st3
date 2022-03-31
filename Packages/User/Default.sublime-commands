@@ -72,5 +72,13 @@
         "command": "transform_timestamp_lines"
         // Optional keyword arguments to provide to command
         //"args": {"key": "value"}
+    },
+    {
+        // Name to show in Command Palette
+        "caption": "Entferne Duplikate Zeiterfassung",
+        // Command to invoke
+        "command": "remove_duplicates_time_tracking"
+        // Optional keyword arguments to provide to command
+        //"args": {"key": "value"}
     }
 ]
